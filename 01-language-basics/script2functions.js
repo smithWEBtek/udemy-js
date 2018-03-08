@@ -4,6 +4,11 @@ var calc1 = function (arg) {
 	console.log('Inside calc1:', arg.toUpperCase());
 };
 
+var calc = function () {
+	console.log('Inside calc');
+	return 'chicken soup'
+};
+
 function calc2(arg) {
 	console.log('Inside calc2: ', arg.toLowerCase());
 };
@@ -21,6 +26,13 @@ calc4 = () => {
 // calc2('WHAT DID YOU SAY ?');
 // calc3('2 + 2');
 
-calc1();
+function calc5(number1, number2) {
+	return number1 + number2;
+};
 
+var returned = calc5(4, 8);
+console.log(returned)
+
+var calculator = calc5;
+console.log(calculator(15, 2));
 
