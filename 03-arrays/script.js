@@ -95,21 +95,20 @@ var array = [1, 2, 3, 4, 5, 6, 7, 8]
 // console.log('reset array is now: ', array);
 
 // ============ shift ========================
-console.log('returning the UNSHIFTed (first one is removed) element: ', array.unshift('Bird'));
-console.log('and array is now: ', array);
+// console.log('returning the UNSHIFTed (first one is removed) element: ', array.unshift('Bird'));
+// console.log('and array is now: ', array);
 
 
 // ============ indexOf ========================
+// getBird = () => {
+// 	return array.indexOf('Bird')
+// }
 
-getBird = () => {
-	return array.indexOf('Bird')
-}
-
-function getBird() {
-	return array[array.indexOf('Bird')]
-}
-console.log('getBird index: ', getBird());
-console.log(array[getBird()]);
+// function getBird() {
+// 	return array[array.indexOf('Bird')]
+// }
+// console.log('getBird index: ', getBird());
+// console.log(array[getBird()]);
 //----------------------------------------------
 // The indexOf() method returns the first 
 // index at which a given element can be found 
@@ -119,14 +118,14 @@ console.log(array[getBird()]);
 
 // ============ findIndex ========================
 
-function findBird(element) {
-	return element === 'Bird'
-}
+// function findBird(element) {
+// 	return element === 'Bird'
+// }
 
-array.push('0')
-console.log('array: ', array)
-console.log('findIndex of Bird: ', array.findIndex(findBird));
-console.log('array is now: ', array);
+// array.push('0')
+// console.log('array: ', array)
+// console.log('findIndex of Bird: ', array.findIndex(findBird));
+// console.log('array is now: ', array);
 
 // The findIndex() method returns the index of the first element 
 // in the array that satisfies the provided testing function. 
@@ -136,6 +135,30 @@ console.log('array is now: ', array);
 
 // ==================  re-assigning value of element after finding index ================
 
-array[array.indexOf("Bird")] = 'Cat';
+// array[array.indexOf("Bird")] = 'Cat';
+// console.log('array is now: ', array);
+
+// ============ slice =================
+// console.log(array);
+// var part = array.slice(array[array.length - 3], array[array.length - 1])
+// console.log(part)
+
+// ============ slice =================
+// console.log(array);
+// var part1 = array.slice(array[array.length - 3])
+// var part2 = array.slice(array[array.length - 3], array[array.length - 1])
+// console.log(part1)
+// console.log(part2)
+
+// ============ splice =================
+console.log(array);
+var part1 = array.splice(array[array.length - 3])
+var part2 = array.splice(array[array.length - 3], array[array.length - 1])
+console.log(part1)
+console.log(part2)
 console.log('array is now: ', array);
 
+var part3 = array.splice(array[array.length - 3], array[array.length - 1])
+console.log(part3)
+console.log('array is now: ', array);
+document.getElementById('main').append(part1)
