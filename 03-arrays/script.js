@@ -151,14 +151,45 @@ var array = [1, 2, 3, 4, 5, 6, 7, 8]
 // console.log(part2)
 
 // ============ splice =================
-console.log(array);
-var part1 = array.splice(array[array.length - 3])
-var part2 = array.splice(array[array.length - 3], array[array.length - 1])
-console.log(part1)
-console.log(part2)
-console.log('array is now: ', array);
+// console.log(array);
+// var part1 = array.splice(array[array.length - 3])
+// var part2 = array.splice(array[array.length - 3], array[array.length - 1])
+// console.log(part1)
+// console.log(part2)
+// console.log('array is now: ', array);
 
-var part3 = array.splice(array[array.length - 3], array[array.length - 1])
-console.log(part3)
-console.log('array is now: ', array);
-document.getElementById('main').append(part1)
+// var part3 = array.splice(array[array.length - 3], array[array.length - 1])
+// console.log(part3)
+// console.log('array is now: ', array);
+// document.getElementById('main').append(part1)
+
+// interview question
+
+const stones = ['a', 'b', 'd', 'a', 'a', 'sue', 'sue', 'sue', 'a', 'b', 'c', 'd', 'a']
+const jewels = ['a', 'b', 'c', 'sue']
+
+const findJewels = () => {
+  let jewelsObject = {}
+
+  const loadJewelsObject = () => {
+    for(let j = 0; j < jewels.length; j++){
+      jewelsObject[jewels[j]] = 0
+    }
+  }
+
+  const countStones = () => {
+    for(let i = 0; i < stones.length; i++){
+      console.log('stones[i]: ', stones[i])
+      if(jewelsObject[stones[i]] >= 0){
+        jewelsObject[stones[i]] += 1;
+      }
+    }
+    console.log('jewelsObject: ', jewelsObject)
+    return jewelsObject;
+  }
+
+  loadJewelsObject()
+  countStones() 
+}
+
+findJewels()
