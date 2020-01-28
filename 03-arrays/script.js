@@ -166,7 +166,7 @@ var array = [1, 2, 3, 4, 5, 6, 7, 8]
 // interview question
 
 const stones = ['a', 'b', 'd', 'a', 'a', 'sue', 'sue', 'sue', 'a', 'b', 'c', 'd', 'a']
-const jewels = ['a', 'b', 'c', 'sue']
+const jewels = ['a', 'b', 'c', 'sue', 'bob']
 
 const findJewels = () => {
   let jewelsObject = {}
